@@ -1,0 +1,46 @@
+body {
+    background-image: url("./tapeta.jpg");
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+nav {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: red;
+    border-bottom: 4px solid red;
+}
+img {
+    border-radius: 40px;
+}
+#zest {
+    text-align: center;
+    margin-left: 180px;
+}
+.zamowienie{
+    position: relative;
+    margin-top: -530px;
+    text-align: center;
+}
+#choinka{
+    margin-left: 1000px;
+    margin-top: -180px;
+    border-radius: 0px;
+}
+#numzam{
+    margin-bottom: 40px;
+    margin-top: 10px;
+}
+#button{
+    color: white;
+    background-color: #ff0000;
+    padding: 10px;
+    margin-top: 10px;
+}
+#liczba{
+    width: 50px;
+}
+#wynik{
+    color: #0000ff;
+    margin-top: -240px;
+}

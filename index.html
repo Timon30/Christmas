@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav><h1>Hurtownia bombek SantaClaus</h1></nav>
+    <table>
+        <tr>
+            <label id="zest" for=""><b>Zestaw nr. 1</b></label>
+            <td><img src="./bombka.jpg" height="150px" width="150px"></td>
+            <td><img src="./bombka.jpg" height="150px" width="150px"></td>
+            <td><img src="./bombka.jpg" height="150px" width="150px"></td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <label id="zest" for=""><b>Zestaw nr. 2</b></label>
+            <td><img src="./bombka.jpg" height="150px" width="150px"></td>
+            <td><img src="./bombka.jpg" height="150px" width="150px"></td>
+            <td><img src="./bombka.jpg" height="150px" width="150px"></td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <label id="zest" for=""><b>Zestaw nr. 3</b></label>
+            <td><img src="./bombka.jpg" height="150px" width="150px"></td>
+            <td><img src="./bombka.jpg" height="150px" width="150px"></td>
+            <td><img src="./bombka.jpg" height="150px" width="150px"></td>
+        </tr>
+    </table>
+    <div class="zamowienie">
+        <h2>Dokonaj zamówienia:</h2>
+        <label id="numzam">Numer zamówienia</label>
+        <select name="" id="zestaw">
+            <option id="zestaw1"> 1</option>
+            <option id="zestaw2"> 2</option>
+            <option id="zestaw3"> 3</option>
+        </select>
+        <br>
+        <br>
+        <label id="numzam">Ilość pudełek</label>
+        <input type="number" id="liczba">
+        <br>
+        <input type="checkbox" name="" id="checkbox">
+        <label id="numzam">Jestem stałym klientem</label>
+        <br>
+        <br>
+        <input id="button" type="button" value="Złóż zamówienie" onclick="zamow()">
+        <img id="choinka" src="./choinka.jpg" height="500px" width="400px">
+        <br>
+        <br>
+        <br>
+        <p id="wynik"></p>
+    </div>
+
+    <script>
+
+    function zamow() {  
+        let zest1 = document.getElementById("zestaw").value;
+        let zest2 = document.getElementById("zestaw").value;
+        let zest3 = document.getElementById("zestaw").value;
+
+        let y = document.getElementById("liczba").value;
+        let check = document.getElementById("checkbox").checked;
+        if (check == false) {
+            let koszt1 = zest1*y;
+            document.getElementById("wynik").innerHTML="Dokonałeś zamówienie na Zestaw nr. " +zest1+"<br><br>Ilość zamówionych pudełek: "+ y +"<br><br>Koszt zamówienia wynosi: "+koszt1+" zł.";
+        } if (check == false) {
+            let koszt2 = zest2*y;
+            document.getElementById("wynik").innerHTML="Dokonałeś zamówienie na Zestaw nr. " +zest2+"<br><br>Ilość zamówionych pudełek: "+ y +"<br><br>Koszt zamówienia wynosi: "+koszt2+" zł.";
+        } if (check == false) {
+            let koszt3 = zest3*y;
+            document.getElementById("wynik").innerHTML="Dokonałeś zamówienie na Zestaw nr. " +zest3+"<br><br>Ilość zamówionych pudełek: "+ y +"<br><br>Koszt zamówienia wynosi: "+koszt3+" zł.";
+        } else {
+            let koszt1 = zest1*y-2;
+            document.getElementById("wynik").innerHTML="Dokonałeś zamówienie na Zestaw nr. " +zest1+"<br><br>Ilość zamówionych pudełek: "+ y +"<br><br>Koszt zamówienia wynosi: "+koszt1+" zł.";
+        }   
+    }
+
+    </script>
+</body>
+</html>
